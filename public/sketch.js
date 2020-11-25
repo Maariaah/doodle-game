@@ -50,7 +50,6 @@ function setup() {
   toggleBtn.mouseClicked(toggleErase);
   createCanvas(windowWidth, windowHeight);
   background("black");
-
 }
 
 function draw() {}
@@ -118,6 +117,7 @@ function mouseDragged() {
   } else {
     stroke(myColor);
     line(pmouseX, pmouseY, mouseX, mouseY);
+    strokeWeight(3);
   }
   let message = {
     x: mouseX,
