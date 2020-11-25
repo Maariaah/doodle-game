@@ -2,7 +2,7 @@ let socket = io();
 let myColor = "white";
 var seconds, minutes;
 var timer;
-var counter = 20;
+var counter = 30;
 let img;
 var data = [
   "BANANA",
@@ -50,6 +50,7 @@ function setup() {
   toggleBtn.mouseClicked(toggleErase);
   createCanvas(windowWidth, windowHeight);
   background("black");
+
 }
 
 function draw() {}
@@ -74,10 +75,10 @@ const myTimer = setInterval(function myTimer() {
   seconds = counter % 60;
   // if (counter < 60)
   //Timer
-  timer.position(width / 2, 0);
+  timer.position(width / 2.3, 0);
   timer.style("color", "white");
   timer.style("font-size", "42px");
-  timer.html(minutes + ":" + seconds);
+  timer.html("You have " + minutes + ":" + seconds + " left");
   //Timer text
   tasksText.style("color", "white");
   tasksText.style("font-size", "42px");
@@ -93,8 +94,10 @@ const myTimer = setInterval(function myTimer() {
   if (turn !== 0) {
     //Reset timer
     if (counter === 0) {
-      counter = 10;
+      counter = 30;
       turn--;
+      clear();
+      background("black");
     }
   } else {
     //Stop the timer
