@@ -6,7 +6,7 @@ let socket = require("socket.io");
 
 let app = express();
 
-var port = process.env.PORT || 2000;
+var port = process.env.PORT || 3000;
 
 let server = app.listen(port);
 
